@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for, redirect
 import requests
 
 sys.path.insert(
@@ -19,11 +19,19 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/api/locations", methods=["GET"])
-def locations():
-    locationQuery = request.args.get("locationQuery")
+@app.route("/form", methods=["GET"])
+def form():
+    return render_template("form.html")
 
-    result = MarketplaceAPI.handleLocations(locationQuery)
+
+@app.route("/api/location", methods=["GET", "POST"])
+def location():
+    if request.method == "POST":
+        locationQuery = request.form.get("loc")
+    else:
+        locationQuery = request.args.get("locationQuery")
+
+    result = MarketplaceAPI.handleLocation(locationQuery)
     return result
 
 
@@ -35,6 +43,11 @@ def search():
 
     result = MarketplaceAPI.handleSearch(lat, lon, q)
     return result
+
+
+@app.route("/dummy", methods=["GET", "POST"])
+def dummy():
+    return "this is a dummy page"
 
 
 if __name__ == "__main__":

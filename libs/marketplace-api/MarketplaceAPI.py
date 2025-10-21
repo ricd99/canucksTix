@@ -1,7 +1,7 @@
 import MarketplaceScraper
 
 
-def handleLocations(locationQuery):
+def handleLocation(locationQuery):
     response = {}
 
     if locationQuery:

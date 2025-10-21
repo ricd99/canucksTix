@@ -16,7 +16,7 @@ baseURL = "http://127.0.0.1:5000/api/"
 
 @app.route("/", methods=["GET"])
 def home():
-    return render_template("base.html")
+    return render_template("index.html")
 
 
 @app.route("/api/locations", methods=["GET"])

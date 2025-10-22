@@ -1,6 +1,6 @@
 import sys
 from flask import Flask, request, render_template, url_for, redirect
-import requests
+from flask_sqlalchemy import SQLAlchemy
 
 sys.path.insert(
     1, "C://Users//ryanh//code//projects//canucksTix//libs//marketplace-api"
@@ -9,6 +9,23 @@ sys.path.insert(
 import MarketplaceAPI
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///locations.sqlite3"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db = SQLAlchemy(app)
+
+
+class locations(db.Model):
+    _id = db.Column("id", db.Integer, primary_key=True)
+    name = db.Column(db.String(100))
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
+
+    def __init__(self, name, latitude, longitude):
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
+
 
 # testing url
 baseURL = "http://127.0.0.1:5000/api/"
@@ -56,4 +73,5 @@ def dummy():
 
 
 if __name__ == "__main__":
+    db.create_all
     app.run(debug=True)

@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 sys.path.insert(
@@ -49,18 +49,6 @@ def location():
         locationQuery = request.args.get("locationQuery")
 
     result = MarketplaceAPI.handleLocation(locationQuery)
-    for loc in result["data"]["locations"]:
-        lat = loc["latitude"]
-        lon = loc["longitude"]
-        name = loc["name"]
-
-        foundLocation = locations.query.filter_by(name=name).first()
-        if foundLocation:
-            pass
-        else:
-            location = locations(name, lat, lon)
-            db.session.add(location)
-            db.commit()
     return result
 
 
@@ -85,6 +73,5 @@ def dummy():
 
 
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
+    db.create_all
     app.run(debug=True)

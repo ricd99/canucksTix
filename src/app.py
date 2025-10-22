@@ -35,11 +35,16 @@ def location():
     return result
 
 
-@app.route("/api/search", methods=["GET"])
+@app.route("/api/search", methods=["GET", "POST"])
 def search():
-    lat = request.args.get("locationLatitude")
-    lon = request.args.get("locationLongitude")
-    q = request.args.get("listingQuery")
+    if request.method == "POST":
+        lat = request.form.get("lat")
+        lon = request.form.get("lon")
+        q = request.form.get("q")
+    else:
+        lat = request.args.get("locationLatitude")
+        lon = request.args.get("locationLongitude")
+        q = request.args.get("listingQuery")
 
     result = MarketplaceAPI.handleSearch(lat, lon, q)
     return result

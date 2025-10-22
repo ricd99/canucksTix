@@ -7,4 +7,13 @@
     <p><input type="text" name="loc" /></p>
     <p><input type="submit" value="submit"/></p>
 </form>
+<form action="/api/search" method="post">
+    <p>Latitude:</p>
+    <p><input type="text" name="lat" placeholder="49.2819" /></p>
+    <p>Longitude:</p>
+    <p><input type="text" name="lon" placeholder="-123.1204"/></p>
+    <p>Query:</p>
+    <p><input type="text" name="q" placeholder="canucks"/></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
 {% endblock %}

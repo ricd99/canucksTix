@@ -35,10 +35,11 @@ def scrape_listings():
         result = MarketplaceAPI.handleSearch(lat, lon, query)
 
         # writing result to file
-        os.makedirs(DATA_DIR, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = os.path.join(DATA_DIR, f"listings_{timestamp}_{name}.json")
+        filename = os.path.join(
+            DATA_DIR, f"{name}", f"listings_{timestamp}_{name}.json"
+        )
 
         with open(filename, "w") as f:
             json.dump(result, f, indent=2)

@@ -10,3 +10,8 @@ notebooks/
 
 # Tests
 tests/
+
+#Databases
+*.sqlite3
+*.sqlite
+*.db

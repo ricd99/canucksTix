@@ -1,5 +1,23 @@
 {% extends "base.html"%}
 {% block title %} Home Page {% endblock %}
 {% block content %}
-<p>Welcome to the Canucks Ticketing Home Page!</p>
+    <h1>Canucks Ticket Exchange</h1>
+    
+    {% if redditData.success %}
+        <h2>{{ redditData.postTitle }}</h2>
+        <p>Total comments: {{ redditData.commentCount }}</p>
+        
+        <div class="comments">
+            {% for comment in redditData.comments %}
+                <div class="comment">
+                    <p><strong>{{ comment.author }}</strong> - {{ comment.created }}</p>
+                    <p>{{ comment.body }}</p>
+                    <a href="{{ comment.permalink }}" target="_blank">View on Reddit</a>
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Error loading Reddit data: {{ redditData.error }}</p>
+    {% endif %}
 {% endblock %}

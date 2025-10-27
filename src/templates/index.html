@@ -4,8 +4,7 @@
     <h1>Canucks Ticket Exchange</h1>
     
     {% if redditData.success %}
-        <h2>{{ redditData.postTitle }}</h2>
-        <p>Total comments: {{ redditData.commentCount }}</p>
+        <h3>Total comments: {{ redditData.commentCount }}</h3>
         
         <div class="comments">
             {% for comment in redditData.comments %}

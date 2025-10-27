@@ -20,24 +20,16 @@ def getComments():
         post = reddit.submission(id=postID)
 
         post.comments.replace_more(limit=None)
-        allComments = post.comments.list()
+
+        topLevelComments = [c for c in post.comments]
 
         # sort comments by recent
-        allComments.sort(key=lambda c: c.created_utc, reverse=True)
+        topLevelComments.sort(key=lambda c: c.created_utc, reverse=True)
 
         formattedComments = []
-        for c in allComments:
-            formattedComments.append(
-                {
-                    "author": str(c.author),
-                    "body": c.body,
-                    "created": datetime.fromtimestamp(c.created_utc).strftime(
-                        "%Y-%m-%d %H:%M:%S"
-                    ),
-                    "createdUTC": c.created_utc,
-                    "permalink": f"https://reddit.com{c.permalink}",
-                }
-            )
+        for c in topLevelComments:
+            formattedComment = formatCommentTree(c, depth=0)
+            formattedComments.append(formattedComment)
 
         return {
             "success": True,
@@ -69,6 +61,23 @@ def getRedditInstance():
     return reddit
 
 
+def formatCommentTree(c, depth):
+    formatted = {
+        "author": str(c.author),
+        "body": c.body,
+        "created": datetime.fromtimestamp(c.created_utc).strftime("%Y-%m-%d %H:%M:%S"),
+        "createdUTC": c.created_utc,
+        "permalink": f"https://reddit.com{c.permalink}",
+        "depth": depth,
+        "replies": [],
+    }
+
+    for reply in c.replies:
+        formatted["replies"].append(formatCommentTree(reply, depth + 1))
+
+    return formatted
+
+
 # Testing
 if __name__ == "__main__":
     print("Testing Reddit API...")
@@ -78,7 +87,11 @@ if __name__ == "__main__":
         print(f"Post: {data['postTitle']}")
         print(f"Total comments: {data['commentCount']}")
         print("\nFirst 3 comments:")
-        for comment in data["comments"][:3]:
-            print(f"  - {comment['author']}: {comment['body'][:50]}...")
+        # for comment in data["comments"][:3]:
+        #     print(f"  - {comment['author']}: {comment['body'][:50]}...")
+        for comment in data["comments"]:
+            print(comment)
+            print("================================")
+
     else:
         print(f"Error: {data.get('error', 'Unknown error')}")

@@ -29,6 +29,8 @@ debug.py
 
 #Temp
 temp.txt
+temp.py
+temp.html
 
 #pycache
 *.pyc

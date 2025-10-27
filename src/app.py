@@ -5,8 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 sys.path.insert(
     1, "C://Users//ryanh//code//projects//canucksTix//libs//marketplace-api"
 )
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
+
 
 import MarketplaceAPI
+import redditAPI
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///locations.sqlite3"

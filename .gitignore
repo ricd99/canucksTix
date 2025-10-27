@@ -6,6 +6,10 @@
 .venv/
 
 # Environment Variables
+.env
+
+#ini
+*.ini
 
 # Notebooks
 notebooks/
@@ -13,11 +17,19 @@ notebooks/
 # Tests
 tests/
 rtest.py
+prawtest.py
+
+#debug
+debug.py
 
 #Databases
 *.sqlite3
 *.sqlite
 *.db
 
-#Temp
+#temp
 temp.txt
+
+#pycache
+*.pyc
+

@@ -5,13 +5,19 @@
 # Virtual Environment
 .venv/
 
+# Environment Variables
+
 # Notebooks
 notebooks/
 
 # Tests
 tests/
+rtest.py
 
 #Databases
 *.sqlite3
 *.sqlite
 *.db
+
+#Temp
+temp.txt

@@ -1,22 +1,214 @@
+
 {% extends "base.html"%}
 {% block title %} Home Page {% endblock %}
-{% block content %}
-    <h1>Canucks Ticket Exchange</h1>
-    
-    {% if redditData.success %}
-        <h3>Total comments: {{ redditData.commentCount }}</h3>
-        
-        <div class="comments">
-            {% for comment in redditData.comments %}
-                <div class="comment">
-                    <p><strong>{{ comment.author }}</strong> - {{ comment.created }}</p>
-                    <p>{{ comment.body }}</p>
-                    <a href="{{ comment.permalink }}" target="_blank">View on Reddit</a>
-                    <hr>
-                </div>
-            {% endfor %}
+{% block extra_css %}
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+.thread-link {
+    color: #88ddff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.thread-link:hover {
+    text-decoration: underline;
+}
+
+.stats {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.refresh-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.refresh-button:hover {
+    background: #0088cc;
+}
+
+.comments-container {
+    display: grid;
+    gap: 25px;
+}
+
+/* Top-level comment styling */
+.comment-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid #00aaff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.comment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 170, 255, 0.3);
+}
+
+/* Reply styling - indented and slightly different appearance */
+.reply {
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 2px solid #0088cc;
+}
+
+.reply .reply {
+    margin-left: 25px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.author {
+    font-weight: bold;
+    color: #00aaff;
+    font-size: 1.1em;
+}
+
+.reply .author {
+    font-size: 1em;
+    color: #88ddff;
+}
+
+.meta {
+    display: flex;
+    gap: 15px;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.score {
+    color: #ffaa00;
+}
+
+.comment-body {
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.comment-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #88ddff;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+
+.comment-link:hover {
+    text-decoration: underline;
+}
+
+.replies-container {
+    margin-top: 10px;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.error-message {
+    background: rgba(255, 50, 50, 0.2);
+    border-left: 4px solid #ff3333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+{% endblock %}
+{% block content %}       
+<div class="container">
+    <header>
+        <h1>🏒 Canucks Ticket Exchange</h1>
+        <p>
+            <a href="{{ redditData.post_url }}" target="_blank" class="thread-link">
+                {{ redditData.post_title }}
+            </a>
+        </p>
+        {% if redditData.success %}
+        <div class="stats">
+            📊 {{ redditData.comment_count }} comments
         </div>
-    {% else %}
-        <p>Error loading Reddit data: {{ redditData.error }}</p>
+        {% endif %}
+        <a href="/" class="refresh-button">🔄 Refresh</a>
+    </header>
+    
+    {% if not redditData.success %}
+    <div class="error-message">
+        <h2>⚠️ Error Loading Comments</h2>
+        <p>{{ redditData.error }}</p>
+        <p>Please check your Reddit API credentials and thread URL.</p>
+    </div>
     {% endif %}
+    
+    <div class="comments-container">
+        {% if redditData.comments %}
+            {% macro render_comment(comment, is_top_level=False) %}
+            <div class="{% if is_top_level %}comment-card{% else %}reply{% endif %}">
+                <div class="comment-header">
+                    <span class="author">u/{{ comment.author }}</span>
+                    <div class="meta">
+                        <span class="score">⬆ {{ comment.score }}</span>
+                        <span class="timestamp">{{ comment.created }}</span>
+                    </div>
+                </div>
+                <div class="comment-body">{{ comment.body }}</div>
+                <a href="{{ comment.permalink }}" target="_blank" class="comment-link">
+                    View on Reddit →
+                </a>
+                
+                {% if comment.replies %}
+                <div class="replies-container">
+                    {% for reply in comment.replies %}
+                        {{ render_comment(reply, is_top_level=False) }}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {% endmacro %}
+            
+            {% for comment in redditData.comments %}
+                {{ render_comment(comment, is_top_level=True) }}
+            {% endfor %}
+        {% else %}
+            <div class="no-comments">
+                <p>No comments found or unable to load thread.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

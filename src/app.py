@@ -7,7 +7,6 @@ sys.path.insert(
 )
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 
-
 import MarketplaceAPI
 import redditAPI
 

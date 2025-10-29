@@ -14,6 +14,17 @@ username = os.getenv("REDDIT_USERNAME")
 postID = "1nvaldi"
 
 
+def getRedditInstance():
+    reddit = praw.Reddit(
+        client_id=clientID,
+        client_secret=clientSecret,
+        password=pw,
+        user_agent=userAgent,
+        username=username,
+    )
+    return reddit
+
+
 def getComments():
     try:
         reddit = getRedditInstance()
@@ -28,15 +39,12 @@ def getComments():
 
         formattedComments = []
         for c in topLevelComments:
-            formattedComment = formatCommentTree(c, depth=0)
-            formattedComments.append(formattedComment)
+            formattedComments.append(formatCommentTree(c, depth=0))
 
         return {
             "success": True,
             "postTitle": post.title,
             "postURL": post.url,
-            "postAuthor": str(post.author),
-            "commentCount": len(formattedComments),
             "comments": formattedComments,
         }
     except Exception as e:
@@ -50,15 +58,13 @@ def getComments():
         }
 
 
-def getRedditInstance():
-    reddit = praw.Reddit(
-        client_id=clientID,
-        client_secret=clientSecret,
-        password=pw,
-        user_agent=userAgent,
-        username=username,
-    )
-    return reddit
+def getCommentBodies(c):
+    body = [c["body"]]
+
+    for reply in c.get("replies", []):
+        body.extend(getCommentBodies(reply))
+
+    return body
 
 
 def formatCommentTree(c, depth):
@@ -84,13 +90,12 @@ if __name__ == "__main__":
     data = getComments()
 
     if data["success"]:
-        print(f"Post: {data['postTitle']}")
-        print(f"Total comments: {data['commentCount']}")
-        print("\nFirst 3 comments:")
+        # print("\nFirst 3 comments:")
         # for comment in data["comments"][:3]:
         #     print(f"  - {comment['author']}: {comment['body'][:50]}...")
         for comment in data["comments"]:
-            print(comment)
+            bodies = getCommentBodies(comment)
+            print(bodies)
             print("================================")
 
     else:

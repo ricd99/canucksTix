@@ -72,7 +72,6 @@ def formatCommentTree(c, depth):
         "author": str(c.author),
         "body": c.body,
         "created": datetime.fromtimestamp(c.created_utc).strftime("%Y-%m-%d %H:%M:%S"),
-        "createdUTC": c.created_utc,
         "permalink": f"https://reddit.com{c.permalink}",
         "depth": depth,
         "replies": [],

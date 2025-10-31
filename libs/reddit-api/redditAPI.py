@@ -2,6 +2,7 @@ import praw
 from datetime import datetime
 from dotenv import load_dotenv
 import os
+import json
 
 load_dotenv("C://Users//ryanh//code//projects//canucksTix//.env")
 
@@ -31,22 +32,40 @@ def getComments():
         post = reddit.submission(id=postID)
 
         post.comments.replace_more(limit=None)
+        flattened = post.comments.list()
+        flattened.sort(key=lambda c: c.created_utc, reverse=True)
 
-        topLevelComments = [c for c in post.comments]
-
-        # sort comments by recent
-        topLevelComments.sort(key=lambda c: c.created_utc, reverse=True)
-
-        formattedComments = []
-        for c in topLevelComments:
-            formattedComments.append(formatCommentTree(c, depth=0))
+        res = []
+        for i, c in enumerate(flattened):
+            res.append(
+                {
+                    "index": i,
+                    "author": str(c.author),
+                    "body": c.body,
+                    "created": datetime.fromtimestamp(c.created_utc).strftime(
+                        "%Y-%m-%d %H:%M:%S"
+                    ),
+                    "permalink": f"https://reddit.com{c.permalink}",
+                }
+            )
 
         return {
             "success": True,
-            "postTitle": post.title,
-            "postURL": post.url,
-            "comments": formattedComments,
+            "comments": res,
         }
+        # topLevelComments = [c for c in post.comments]
+
+        # # sort comments by recent
+        # topLevelComments.sort(key=lambda c: c.created_utc, reverse=True)
+
+        # formattedComments = []
+        # for c in topLevelComments:
+        #     formattedComments.append(formatCommentTree(c, depth=0))
+
+        # return {
+        #     "success": True,
+        #     "comments": formattedComments,
+        # }
     except Exception as e:
         print(f"Error fetching Reddit data: {e}")
         return {
@@ -58,29 +77,12 @@ def getComments():
         }
 
 
-def getCommentBodies(c):
-    body = [c["body"]]
+def getBodies(comments):
+    res = []
+    for c in comments["comments"]:
+        res.append(c["body"])
 
-    for reply in c.get("replies", []):
-        body.extend(getCommentBodies(reply))
-
-    return body
-
-
-def formatCommentTree(c, depth):
-    formatted = {
-        "author": str(c.author),
-        "body": c.body,
-        "created": datetime.fromtimestamp(c.created_utc).strftime("%Y-%m-%d %H:%M:%S"),
-        "permalink": f"https://reddit.com{c.permalink}",
-        "depth": depth,
-        "replies": [],
-    }
-
-    for reply in c.replies:
-        formatted["replies"].append(formatCommentTree(reply, depth + 1))
-
-    return formatted
+    return res
 
 
 # Testing
@@ -92,10 +94,15 @@ if __name__ == "__main__":
         # print("\nFirst 3 comments:")
         # for comment in data["comments"][:3]:
         #     print(f"  - {comment['author']}: {comment['body'][:50]}...")
-        for comment in data["comments"]:
-            bodies = getCommentBodies(comment)
-            print(bodies)
-            print("================================")
+        # for comment in data["comments"]:
+        #     print(comment)
+        #     # bodies = getCommentBodies(comment)
+        #     # print(bodies)
+        #     print("================================")
+        print(json.dumps(data, indent=2))
+
+        bodies = getBodies(data)
+        print(bodies)
 
     else:
         print(f"Error: {data.get('error', 'Unknown error')}")

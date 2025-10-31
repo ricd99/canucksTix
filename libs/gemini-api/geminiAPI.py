@@ -1,27 +1,55 @@
 from google import genai
 from dotenv import load_dotenv
 import os
-import inspect
+from pathlib import Path
+import sys
+
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
+import redditAPI
 
 load_dotenv("C://Users//ryanh//code//projects//canucksTix//.env")
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
-response = client.models.generate_content(
-    model="gemini-2.0-flash",
-    contents="""Rank the following ticket listings for canucks games based on price and seat location: 
-    1. Pair of tickets for tonight vs nyr, Sec 310 row 5, $180 per pair. Below face value.
-    2. For Sale - 2 lower bowl tickets to Oct 28th game vs New York Rangers, Sec 122 row 11, $125 each
-    3. I have two tickets for sale section 103 row 9. $220 per ticket. Jets shoot this way twice.
-    Your output should be in JSON format. the keys should be the price, the location, and your rating (give it an excellent deal, good deal, face value, or bad deal)""",
-    # config={
-    #     "system_instruction": """ You are an incredibly smart ticket agent who can make an accurate estimation of a ticket's value for a Canucks game
-    #     considering its price and seat location in Rogers Arena""",
-    #     "temperature": 0.7,
-    # },
-)
 
-print(response.text)
+def rateListings(bodies):
+    promptTemplate = getPromptTemplate()
+
+    bodiesText = "\n\n".join(
+        [f"COMMENT #{i}: \n{body}" for i, body in enumerate(bodies)]
+    )
+
+    prompt = promptTemplate + "\n\n" + bodiesText
+
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt,
+            # config={
+            #     "system_instruction": """ You are an incredibly smart ticket agent who can make an accurate estimation of a ticket's value for a Canucks game
+            #     considering its price and seat location in Rogers Arena""",
+            #     "temperature": 0.7,
+            # },
+        )
+
+        return response
+    except Exception as e:
+        print(f"Error analyzing batch: {e}")
 
 
-# keep your eyes out for free deals, links to other pages to sell tickets,
+def getPromptTemplate():
+    currentPath = Path(__file__)  # geminiAPI.py
+    root = currentPath.parent.parent.parent  # canucksTix/
+    promptPath = root / "src" / "constants" / "geminiPrompt.txt"
+    with open(promptPath, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+# keep your eyes out for free deals (e.g. "first to guess my favourite player"), links to other pages to sell tickets,
+# eliminate "ISO" (in search of)
+# store data in database for training later on
+
+if __name__ == "__main__":
+    data = redditAPI.getComments()
+
+    print(rateListings(redditAPI.getBodies(data)))

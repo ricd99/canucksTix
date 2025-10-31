@@ -6,9 +6,11 @@ sys.path.insert(
     1, "C://Users//ryanh//code//projects//canucksTix//libs//marketplace-api"
 )
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//gemini-api")
 
 import MarketplaceAPI
 import redditAPI
+import geminiAPI
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///locations.sqlite3"
@@ -36,6 +38,7 @@ baseURL = "http://127.0.0.1:5000/api/"
 @app.route("/", methods=["GET"])
 def home():
     redditData = redditAPI.getComments()
+    geminiData = geminiAPI.rateListings(redditData)
     return render_template("index.html", redditData=redditData)
 
 

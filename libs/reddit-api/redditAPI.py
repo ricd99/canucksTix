@@ -77,14 +77,6 @@ def getComments():
         }
 
 
-def getBodies(comments):
-    res = []
-    for c in comments["comments"]:
-        res.append(c["body"])
-
-    return res
-
-
 # Testing
 if __name__ == "__main__":
     print("Testing Reddit API...")
@@ -100,9 +92,6 @@ if __name__ == "__main__":
         #     # print(bodies)
         #     print("================================")
         print(json.dumps(data, indent=2))
-
-        bodies = getBodies(data)
-        print(bodies)
 
     else:
         print(f"Error: {data.get('error', 'Unknown error')}")

@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 import sys
+import json
 
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 import redditAPI
@@ -32,7 +33,19 @@ def rateListings(bodies):
             # },
         )
 
-        return response
+        responseText = response.text.strip()
+
+        start = responseText.find("{")
+        end = responseText.rfind("}") + 1
+
+        if (start != -1) and (end != -1):
+            jsonString = responseText[start:end]
+            analysis = json.loads(jsonString)
+        else:
+            print("No JSON found in response")
+            analysis = {}
+
+        return analysis
     except Exception as e:
         print(f"Error analyzing batch: {e}")
 
@@ -49,7 +62,7 @@ def getPromptTemplate():
 # eliminate "ISO" (in search of)
 # store data in database for training later on
 
-if __name__ == "__main__":
-    data = redditAPI.getComments()
+# if __name__ == "__main__":
+#     data = redditAPI.getComments()
 
-    print(rateListings(redditAPI.getBodies(data)))
+#     print(rateListings(redditAPI.getBodies(data)))

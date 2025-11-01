@@ -35,19 +35,16 @@ def getComments():
         flattened = post.comments.list()
         flattened.sort(key=lambda c: c.created_utc, reverse=True)
 
-        res = []
+        res = {}
         for i, c in enumerate(flattened):
-            res.append(
-                {
-                    "index": i,
-                    "author": str(c.author),
-                    "body": c.body,
-                    "created": datetime.fromtimestamp(c.created_utc).strftime(
-                        "%Y-%m-%d %H:%M:%S"
-                    ),
-                    "permalink": f"https://reddit.com{c.permalink}",
-                }
-            )
+            res[str(i)] = {
+                "author": str(c.author),
+                "body": c.body,
+                "created": datetime.fromtimestamp(c.created_utc).strftime(
+                    "%Y-%m-%d %H:%M:%S"
+                ),
+                "permalink": f"https://reddit.com{c.permalink}",
+            }
 
         return {
             "success": True,

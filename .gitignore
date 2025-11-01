@@ -18,6 +18,7 @@ notebooks/
 tests/
 rtest.py
 prawtest.py
+src/services/testingData/
 
 #debug
 debug.py

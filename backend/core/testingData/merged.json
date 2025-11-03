@@ -1,25 +1,13 @@
 {
   "success": true,
   "comments": {
-    "4": {
-      "author": "Vast_Goal_8216",
-      "body": "Looking to buy 3 tickets for tonight, Oct 28th.\nPreferably cheap upper bowl tickets, under $100.\n\nCan be student rush tickets as well.",
-      "created": "2025-10-28 13:27:08",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlw2seo/",
-      "analysis": {
-        "description": "Trade of two upper bowl defending tickets for tonight for another game."
-      }
-    },
     "5": {
       "author": "kazin29",
       "body": "Wanting to trade two upper bowl defending tickets for tonight for another game",
       "created": "2025-10-28 11:23:43",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlvdnse/",
       "analysis": {
-        "location": "Sec 310 row 5",
-        "price": 180,
-        "game": "tonight vs nyr",
-        "rating": "good"
+        "description": "Wanting to trade two upper bowl defending tickets for tonight for another game"
       }
     },
     "6": {
@@ -28,10 +16,10 @@
       "created": "2025-10-28 11:02:02",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlv9708/",
       "analysis": {
-        "location": "section 103 row 9",
-        "price": 220,
-        "game": "Jets",
-        "rating": "good"
+        "location": "Sec 310 row 5",
+        "price": 180,
+        "game": "tonight vs nyr",
+        "rating": "face value"
       }
     },
     "7": {
@@ -40,10 +28,11 @@
       "created": "2025-10-28 02:05:17",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlsqn1z/",
       "analysis": {
-        "location": "Sec 122 row 11",
-        "price": 125,
-        "game": "Oct 28th game vs New York Rangers",
-        "rating": "face value"
+        "location": "section 103 row 9",
+        "price": 220,
+        "game": null,
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "8": {
@@ -52,22 +41,23 @@
       "created": "2025-10-27 18:36:22",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlr4vo2/",
       "analysis": {
+        "location": "Sec 122 row 11",
+        "price": 125,
+        "game": "Oct 28th game vs New York Rangers",
+        "rating": "good"
+      }
+    },
+    "9": {
+      "author": "truestlife",
+      "body": "Selling 2 upper bowl tickets for tomorrow Oct 28 Vs Rangers at cost (I\u2019m a STM). Sec 325 row 5 or 7\n\nDM if interested! Also can meet in person for the transfer",
+      "created": "2025-10-27 14:32:17",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlpwyjt/",
+      "analysis": {
         "location": "Sec 325 row 5 or 7",
         "price": null,
         "game": "tomorrow Oct 28 Vs Rangers",
-        "rating": null
-      }
-    },
-    "10": {
-      "author": "DilIsPickle",
-      "body": "ISO 2 tickets November 11, Jets Game",
-      "created": "2025-10-27 14:29:01",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlpwcfd/",
-      "analysis": {
-        "location": "Section 317, Row 3 or Section 303, Row 7",
-        "price": 205,
-        "game": "Edmonton on Sunday, Oct. 26",
-        "rating": "face value"
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "11": {
@@ -76,22 +66,22 @@
       "created": "2025-10-26 01:10:05",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlg0zgw/",
       "analysis": {
+        "location": "Section 317, Row 3 or Section 303, Row 7",
+        "price": 205,
+        "game": "Edmonton on Sunday, Oct. 26",
+        "rating": "face value"
+      }
+    },
+    "12": {
+      "author": "labyrinthpersona",
+      "body": "Selling 2 tickets to the Oilers game Oct 26. Sec 316, row 13 - $225/pair",
+      "created": "2025-10-25 21:07:49",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlfborj/",
+      "analysis": {
         "location": "Sec 316, row 13",
         "price": 225,
         "game": "Oilers game Oct 26",
         "rating": "face value"
-      }
-    },
-    "13": {
-      "author": "whatevsbroh",
-      "body": "$250 for the pair takes em",
-      "created": "2025-10-25 11:15:02",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlckbpa/",
-      "analysis": {
-        "location": "Section 122 row 12",
-        "price": null,
-        "game": "return of Miller on Tuesday",
-        "rating": null
       }
     },
     "14": {
@@ -100,10 +90,11 @@
       "created": "2025-10-25 11:12:07",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlcjrtp/",
       "analysis": {
-        "location": "Section 307, Row 4",
-        "price": 300,
-        "game": "October 25th vs Montreal",
-        "rating": "face value"
+        "location": "Section 122 row 12",
+        "price": null,
+        "game": "return of Miller on Tuesday",
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "15": {
@@ -112,43 +103,58 @@
       "created": "2025-10-23 09:51:16",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkzhqsr/",
       "analysis": {
-        "location": null,
-        "price": null,
-        "game": "Friday December 5 game against Utah",
-        "rating": null
+        "location": "Section 307, Row 4",
+        "price": 300,
+        "game": "October 25th vs Montreal",
+        "rating": "face value"
       }
     },
-    "17": {
+    "16": {
+      "author": "Atron84",
+      "body": "I need to sell 2 tickets to the Friday December 5 game against Utah. Please DM if you're interested.",
+      "created": "2025-10-22 23:08:47",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkwvl3d/",
+      "analysis": {
+        "price": null,
+        "game": "Friday December 5 game against Utah",
+        "location": null,
+        "rating": null,
+        "reasoning": "incomplete"
+      }
+    },
+    "18": {
       "author": "whatevsbroh",
-      "body": "I have a pair 4 rows from the glass. STH. feel free to PM, I have plenty of pics as proof and can also meet in person if you prefer",
-      "created": "2025-10-21 22:01:05",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkq8ef0/",
+      "body": "Hi rainbow. I have a pair in lower bowl section 122, row 11. Let me know if youre interested (130/ea)",
+      "created": "2025-10-21 21:59:54",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkq89d5/",
       "analysis": {
         "location": "section 122, row 11",
         "price": 130,
         "game": null,
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "25": {
-      "author": "rainbowpigon",
-      "body": "ISO 2 tickets for NYR games please!",
-      "created": "2025-10-19 18:05:52",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nken32u/",
+    "19": {
+      "author": "SKitura",
+      "body": "Looking to sell 2 tickets to the Abby Canucks home opener in offensive end.",
+      "created": "2025-10-20 21:45:20",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkjw4ao/",
       "analysis": {
-        "description": "Trade NYR October 28 two upper defending zone tickets for a equivalent game."
+        "price": null,
+        "game": "Abby Canucks home opener",
+        "location": null,
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "28": {
-      "author": "TableNew1277",
-      "body": "Sent you a DM",
-      "created": "2025-10-16 15:32:04",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njvi873/",
+    "26": {
+      "author": "kazin29",
+      "body": "Want to trade NYR October 28 two upper defending zone tickets for a equivalent game.",
+      "created": "2025-10-19 14:22:15",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkdktyr/",
       "analysis": {
-        "location": "Section 122, row 19",
-        "price": 350,
-        "game": "Montreal game on October 25th",
-        "rating": "poor"
+        "description": "Want to trade NYR October 28 two upper defending zone tickets for a equivalent game."
       }
     },
     "29": {
@@ -157,10 +163,10 @@
       "created": "2025-10-16 15:12:16",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njvet6u/",
       "analysis": {
-        "location": "Section 310 Row 12 Seat 110",
-        "price": null,
-        "game": "Nov 5 v Chicago",
-        "rating": null
+        "location": "Section 122, row 19",
+        "price": 350,
+        "game": "Montreal game on October 25th",
+        "rating": "poor"
       }
     },
     "30": {
@@ -169,19 +175,24 @@
       "created": "2025-10-16 14:59:02",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njvci4h/",
       "analysis": {
+        "location": "Section 310 Row 12 Seat 110",
+        "price": null,
+        "game": "Nov 5 v Chicago",
+        "rating": null,
+        "reasoning": "incomplete"
+      }
+    },
+    "31": {
+      "author": "starfish2686",
+      "body": "Selling one lower bowl ticket that I got gifted. Set the price lower than the value so I can just get rid of it quick and exchange the money for two upper bowl tickets instead (going with my dad). Pretty close to the ice and right near the blue line on the Canucks' side, Sec 105 Row 18. Just buy it here.\n\n[https://my.ticketmaster.ca/ds/ZeuQGAkJYqH/event/110062EBD7F54CE5](https://my.ticketmaster.ca/ds/ZeuQGAkJYqH/event/110062EBD7F54CE5)",
+      "created": "2025-10-15 15:45:15",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njpalrn/",
+      "analysis": {
         "location": "Sec 105 Row 18",
         "price": null,
         "game": null,
-        "rating": null
-      }
-    },
-    "41": {
-      "author": "pennepasta14",
-      "body": "Sherwood! Would love to bring my mom today!",
-      "created": "2025-10-13 10:47:14",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njb54jk/",
-      "analysis": {
-        "description": "Giveaway: Guess my favorite player on the current roster to win tickets for this afternoon vs St. Louis. Lower bowl, section 112, row 7."
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "42": {
@@ -190,22 +201,20 @@
       "created": "2025-10-13 09:36:23",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njaq1cx/",
       "analysis": {
+        "description": "Giveaway of tickets for the game this afternoon vs St. Louis in section 112, row 7"
+      }
+    },
+    "43": {
+      "author": "BudgetAlternative308",
+      "body": "I have 5 tickets available, lower bowl section 103 row 9. $210 per ticket.",
+      "created": "2025-10-10 13:41:01",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niu3ve6/",
+      "analysis": {
         "location": "lower bowl section 103 row 9",
         "price": 210,
         "game": null,
-        "rating": null
-      }
-    },
-    "44": {
-      "author": "KniveyTim",
-      "body": "Looking for lower bowl tickets to December 5th for Filipino Heritage Night.",
-      "created": "2025-10-10 11:38:28",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nitg6g1/",
-      "analysis": {
-        "location": "Lower bowl",
-        "price": 210,
-        "game": "Dec 5th game",
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "45": {
@@ -214,9 +223,9 @@
       "created": "2025-10-09 23:03:01",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niq9130/",
       "analysis": {
-        "location": "Lower bowl section 103 row 9",
-        "price": 300,
-        "game": null,
+        "location": "Lower bowl",
+        "price": 210,
+        "game": "Dec 5th game",
         "rating": null
       }
     },
@@ -229,19 +238,21 @@
         "location": "Lower bowl section 103 row 9",
         "price": 300,
         "game": null,
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "52": {
-      "author": "None",
-      "body": "[deleted]",
-      "created": "2025-10-09 15:28:20",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niob64u/",
+    "47": {
+      "author": "BudgetAlternative308",
+      "body": "I have a 3 tickets available. Lower bowl section 103 row 9. $300 each.",
+      "created": "2025-10-09 22:57:36",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niq8gg8/",
       "analysis": {
-        "location": "Section 319 row 15",
-        "price": null,
-        "game": "home opener this evening",
-        "rating": null
+        "location": "Lower bowl section 103 row 9",
+        "price": 300,
+        "game": null,
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
     "53": {
@@ -250,55 +261,72 @@
       "created": "2025-10-09 11:37:26",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nin2vsy/",
       "analysis": {
-        "description": "Trade: 2 floor seats to Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
+        "location": "Section 319 row 15",
+        "price": null,
+        "game": "home opener this evening",
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "65": {
-      "author": "batsuit_nipples",
-      "body": "DM'd!",
-      "created": "2025-10-07 19:41:55",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nicxipj/",
+    "54": {
+      "author": "whiteferrari",
+      "body": "I have 2 floor seats to the Kaytranada + JUSTICE concert next week (face value = $418) and looking to trade them for a pair of Canucks tickets!",
+      "created": "2025-10-09 07:51:25",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nilt2g3/",
+      "analysis": {
+        "description": "Trading two floor seats to the Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
+      }
+    },
+    "66": {
+      "author": "truestlife",
+      "body": "STM here - Selling 2 tickets to home opener on Thursday for below cost. Seats are upper bowl centre ice, row 10. DM if interested!",
+      "created": "2025-10-07 19:04:43",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nicrj5z/",
       "analysis": {
         "location": "upper bowl centre ice, row 10",
         "price": null,
         "game": "home opener on Thursday",
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "73": {
-      "author": "truestlife",
-      "body": "Hi, I\u2019m a STM and have tix for sale to the home opener. DM\u2019d you!",
-      "created": "2025-10-05 14:32:42",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nhypugm/",
+    "74": {
+      "author": "whatevsbroh",
+      "body": "Hi all, STM, have pair available for opener against calgary, lower bowl, row 4, canucks defend twice",
+      "created": "2025-10-05 10:06:20",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nhx6euh/",
       "analysis": {
         "location": "lower bowl, row 4",
         "price": null,
         "game": "opener against calgary",
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "76": {
-      "author": "HaGao_SiuMai",
-      "body": "Hey! Are you selling the Calgary home opener for Oct 9th?",
-      "created": "2025-10-04 23:31:14",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nhum6l9/",
+    "77": {
+      "author": "LuckyNaslund",
+      "body": "Full STH. Selling most games section 313, row 10 message for any games and I'll see if I have your game in stock",
+      "created": "2025-10-03 22:41:30",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nho9ber/",
       "analysis": {
         "location": "section 313, row 10",
         "price": null,
         "game": null,
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     },
-    "83": {
-      "author": "tedjansen27",
-      "body": "I'm visiting Vancouver for the first time from Montana and looking for tickets for the October 26th Canucks vs. Oilers game. Looking forward to enjoying your city, thank you!",
-      "created": "2025-10-02 18:31:45",
-      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nhgxsm3/",
+    "84": {
+      "author": "supersmart19",
+      "body": "Canucks shoot twice, Section 114, Row 6, goal line view close to the aisle! All games for the upcoming season available, DM me for more info.",
+      "created": "2025-10-01 18:47:11",
+      "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nhakqhs/",
       "analysis": {
         "location": "Section 114, Row 6",
         "price": null,
         "game": "All games for the upcoming season",
-        "rating": null
+        "rating": null,
+        "reasoning": "incomplete"
       }
     }
   }

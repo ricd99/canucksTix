@@ -6,7 +6,7 @@ import sys
 import json
 
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
-import redditAPI
+import reddit_api
 
 load_dotenv("C://Users//ryanh//code//projects//canucksTix//.env")
 
@@ -53,7 +53,7 @@ def rateListings(bodies):
 def getPromptTemplate():
     currentPath = Path(__file__)  # geminiAPI.py
     root = currentPath.parent.parent.parent  # canucksTix/
-    promptPath = root / "src" / "constants" / "geminiPrompt.txt"
+    promptPath = root / "backend" / "constants" / "geminiPrompt.txt"
     with open(promptPath, "r", encoding="utf-8") as f:
         return f.read()
 

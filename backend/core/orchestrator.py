@@ -6,8 +6,8 @@ from typing import List, Dict, Any
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//gemini-api")
 
-import redditAPI
-import geminiAPI
+import reddit_api
+import gemini_api
 
 # cache for testing
 TESTING_DATA_DIR = Path(__file__).parent / "testingData"
@@ -26,7 +26,7 @@ def getAllListings():
             comments = json.load(f)
     else:
         print("🌐 Fetching fresh Reddit data")
-        comments = redditAPI.getComments()
+        comments = reddit_api.getComments()
         with open(REDDIT_CACHE, "w", encoding="utf-8") as f:
             json.dump(comments, f, indent=2)
 
@@ -37,7 +37,8 @@ def getAllListings():
         with open(GEMINI_CACHE, "r", encoding="utf-8") as f:
             analysis = json.load(f)
     else:
-        analysis = geminiAPI.rateListings(bodies)
+        print("🌐 Fetching fresh Gemini analysis")
+        analysis = gemini_api.rateListings(bodies)
         with open(GEMINI_CACHE, "w", encoding="utf-8") as f:
             json.dump(analysis, f, indent=2)
 
@@ -46,6 +47,7 @@ def getAllListings():
         with open(MERGED_CACHE, "r", encoding="utf-8") as f:
             mergedData = json.load(f)
     else:
+        print("🌐 Fresh merge data")
         mergedData = _mergeAnalysis(comments, analysis)
         with open(MERGED_CACHE, "w", encoding="utf-8") as f:
             json.dump(mergedData, f, indent=2)

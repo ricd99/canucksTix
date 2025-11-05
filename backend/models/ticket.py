@@ -14,7 +14,7 @@ from sqlalchemy.orm import relationship
 from db.database import Base
 
 
-class Tickets(Base):
+class Ticket(Base):
     __tablename__ = "tickets"
 
     id = Column(Integer, primary_key=True, index=True)

@@ -2,20 +2,6 @@ from typing import List, Optional, Dict
 from datetime import datetime
 from pydantic import BaseModel
 
-# id = Column(Integer, primary_key=True, index=True)
-#     source = Column(String)  # "reddit", "craigslist", etc.
-#     author = Column(String)
-#     body = Column(String)
-#     created = Column(DateTime)
-#     permalink = Column(String)
-
-#     location = Column(String, nullable=True)
-#     price_per_ticket = Column(Float, nullable=True)
-#     quantity = Column(Integer, nullable=True)
-#     game = Column(String, nullable=True)
-#     rating = Column(String, nullable=True)
-#     description = Column(String, nullable=True)
-
 
 class TicketResponse(BaseModel):
     id: int

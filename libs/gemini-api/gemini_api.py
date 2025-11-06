@@ -8,9 +8,9 @@ import json
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 import reddit_api
 
-load_dotenv("C://Users//ryanh//code//projects//canucksTix//.env")
+from backend.core.config import settings
 
-client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
 
 def rateListings(bodies):

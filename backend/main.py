@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from core.config import settings
+from routers import ticket
 
 app = FastAPI(
     title="Tix",
@@ -18,6 +19,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(ticket.router, prefix=settings.API_PREFIX)
 
 if __name__ == "__main__":
     import uvicorn

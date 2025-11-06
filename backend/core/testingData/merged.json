@@ -19,7 +19,7 @@
         "location": "Sec 310 row 5",
         "price": 180,
         "game": "tonight vs nyr",
-        "rating": "face value"
+        "rating": "good"
       }
     },
     "7": {
@@ -31,8 +31,7 @@
         "location": "section 103 row 9",
         "price": 220,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "8": {
@@ -56,8 +55,7 @@
         "location": "Sec 325 row 5 or 7",
         "price": null,
         "game": "tomorrow Oct 28 Vs Rangers",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "11": {
@@ -69,7 +67,7 @@
         "location": "Section 317, Row 3 or Section 303, Row 7",
         "price": 205,
         "game": "Edmonton on Sunday, Oct. 26",
-        "rating": "face value"
+        "rating": "good"
       }
     },
     "12": {
@@ -81,7 +79,7 @@
         "location": "Sec 316, row 13",
         "price": 225,
         "game": "Oilers game Oct 26",
-        "rating": "face value"
+        "rating": "good"
       }
     },
     "14": {
@@ -93,8 +91,7 @@
         "location": "Section 122 row 12",
         "price": null,
         "game": "return of Miller on Tuesday",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "15": {
@@ -106,7 +103,7 @@
         "location": "Section 307, Row 4",
         "price": 300,
         "game": "October 25th vs Montreal",
-        "rating": "face value"
+        "rating": "poor"
       }
     },
     "16": {
@@ -115,11 +112,10 @@
       "created": "2025-10-22 23:08:47",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkwvl3d/",
       "analysis": {
+        "location": null,
         "price": null,
         "game": "Friday December 5 game against Utah",
-        "location": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "18": {
@@ -131,8 +127,7 @@
         "location": "section 122, row 11",
         "price": 130,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "19": {
@@ -141,11 +136,7 @@
       "created": "2025-10-20 21:45:20",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkjw4ao/",
       "analysis": {
-        "price": null,
-        "game": "Abby Canucks home opener",
-        "location": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "description": "Looking to sell 2 tickets to the Abby Canucks home opener in offensive end."
       }
     },
     "26": {
@@ -178,8 +169,7 @@
         "location": "Section 310 Row 12 Seat 110",
         "price": null,
         "game": "Nov 5 v Chicago",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "31": {
@@ -191,8 +181,7 @@
         "location": "Sec 105 Row 18",
         "price": null,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "42": {
@@ -201,7 +190,7 @@
       "created": "2025-10-13 09:36:23",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njaq1cx/",
       "analysis": {
-        "description": "Giveaway of tickets for the game this afternoon vs St. Louis in section 112, row 7"
+        "description": "Giveaway - Guess my favorite player on the current roster"
       }
     },
     "43": {
@@ -213,8 +202,7 @@
         "location": "lower bowl section 103 row 9",
         "price": 210,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "45": {
@@ -226,7 +214,7 @@
         "location": "Lower bowl",
         "price": 210,
         "game": "Dec 5th game",
-        "rating": null
+        "rating": "good"
       }
     },
     "46": {
@@ -238,8 +226,7 @@
         "location": "Lower bowl section 103 row 9",
         "price": 300,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "47": {
@@ -251,8 +238,7 @@
         "location": "Lower bowl section 103 row 9",
         "price": 300,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "53": {
@@ -264,8 +250,7 @@
         "location": "Section 319 row 15",
         "price": null,
         "game": "home opener this evening",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "54": {
@@ -274,7 +259,7 @@
       "created": "2025-10-09 07:51:25",
       "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nilt2g3/",
       "analysis": {
-        "description": "Trading two floor seats to the Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
+        "description": "Looking to trade two floor seats to the Kaytranada + JUSTICE concert next week for a pair of Canucks tickets!"
       }
     },
     "66": {
@@ -286,8 +271,7 @@
         "location": "upper bowl centre ice, row 10",
         "price": null,
         "game": "home opener on Thursday",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "74": {
@@ -299,8 +283,7 @@
         "location": "lower bowl, row 4",
         "price": null,
         "game": "opener against calgary",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "77": {
@@ -312,8 +295,7 @@
         "location": "section 313, row 10",
         "price": null,
         "game": null,
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     },
     "84": {
@@ -325,8 +307,7 @@
         "location": "Section 114, Row 6",
         "price": null,
         "game": "All games for the upcoming season",
-        "rating": null,
-        "reasoning": "incomplete"
+        "rating": null
       }
     }
   }

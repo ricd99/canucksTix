@@ -1,6 +1,9 @@
 from typing import List
 from pydantic_settings import BaseSettings
 from pydantic import field_validator
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 
 class Settings(BaseSettings):
@@ -23,7 +26,7 @@ class Settings(BaseSettings):
         return v.split(",") if v else []
 
     class Config:
-        env_file = ".env"
+        env_file = PROJECT_ROOT / ".env"
         env_file_encoding = "utf-8"
         case_sensitive = True
 

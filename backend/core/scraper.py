@@ -16,7 +16,7 @@ REDDIT_CACHE = TESTING_DATA_DIR / "redditComments.json"
 GEMINI_CACHE = TESTING_DATA_DIR / "geminiAnalysis.json"
 MERGED_CACHE = TESTING_DATA_DIR / "merged.json"
 
-USE_CACHE = True
+USE_CACHE = False
 
 
 def getAllListings():

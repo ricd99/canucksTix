@@ -3,14 +3,16 @@ from datetime import datetime
 from dotenv import load_dotenv
 import os
 import json
+import sys
 
-load_dotenv("C://Users//ryanh//code//projects//canucksTix//.env")
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
+from backend.core.config import settings
 
-clientID = os.getenv("REDDIT_CLIENT_ID")
-clientSecret = os.getenv("REDDIT_CLIENT_SECRET")
-pw = os.getenv("REDDIT_PASSWORD")
-userAgent = os.getenv("REDDIT_USER_AGENT")
-username = os.getenv("REDDIT_USERNAME")
+clientID = settings.REDDIT_CLIENT_ID
+clientSecret = settings.REDDIT_CLIENT_SECRET
+pw = settings.REDDIT_PASSWORD
+userAgent = settings.REDDIT_USER_AGENT
+username = settings.REDDIT_USERNAME
 
 postID = "1nvaldi"
 

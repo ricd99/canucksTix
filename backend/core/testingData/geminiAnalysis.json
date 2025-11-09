@@ -1,149 +1,195 @@
 {
-  "5": {
-    "description": "Wanting to trade two upper bowl defending tickets for tonight for another game"
-  },
   "6": {
     "location": "Sec 310 row 5",
-    "price": 180,
+    "price_per_ticket": 90,
+    "quantity": 2,
     "game": "tonight vs nyr",
-    "rating": "good"
+    "rating": "good",
+    "description": null
   },
   "7": {
     "location": "section 103 row 9",
-    "price": 220,
+    "price_per_ticket": 220,
+    "quantity": 2,
     "game": null,
-    "rating": null
+    "rating": "poor",
+    "description": "incomplete"
   },
   "8": {
     "location": "Sec 122 row 11",
-    "price": 125,
+    "price_per_ticket": 125,
+    "quantity": 2,
     "game": "Oct 28th game vs New York Rangers",
-    "rating": "good"
+    "rating": "good",
+    "description": null
   },
   "9": {
     "location": "Sec 325 row 5 or 7",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 2,
     "game": "tomorrow Oct 28 Vs Rangers",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "11": {
     "location": "Section 317, Row 3 or Section 303, Row 7",
-    "price": 205,
+    "price_per_ticket": 102.5,
+    "quantity": 2,
     "game": "Edmonton on Sunday, Oct. 26",
-    "rating": "good"
+    "rating": "face value",
+    "description": null
   },
   "12": {
     "location": "Sec 316, row 13",
-    "price": 225,
+    "price_per_ticket": 112.5,
+    "quantity": 2,
     "game": "Oilers game Oct 26",
-    "rating": "good"
+    "rating": "face value",
+    "description": null
   },
   "14": {
     "location": "Section 122 row 12",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 2,
     "game": "return of Miller on Tuesday",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "15": {
     "location": "Section 307, Row 4",
-    "price": 300,
+    "price_per_ticket": 150,
+    "quantity": 2,
     "game": "October 25th vs Montreal",
-    "rating": "poor"
+    "rating": "good",
+    "description": null
   },
   "16": {
     "location": null,
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 2,
     "game": "Friday December 5 game against Utah",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "18": {
     "location": "section 122, row 11",
-    "price": 130,
+    "price_per_ticket": 130,
+    "quantity": 2,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "19": {
-    "description": "Looking to sell 2 tickets to the Abby Canucks home opener in offensive end."
+    "location": null,
+    "price_per_ticket": null,
+    "quantity": 2,
+    "game": "Abby Canucks home opener",
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "26": {
-    "description": "Want to trade NYR October 28 two upper defending zone tickets for a equivalent game."
+    "description": "brief description of trade: Want to trade NYR October 28 two upper defending zone tickets for a equivalent game."
   },
   "29": {
     "location": "Section 122, row 19",
-    "price": 350,
+    "price_per_ticket": 350,
+    "quantity": 2,
     "game": "Montreal game on October 25th",
-    "rating": "poor"
+    "rating": "poor",
+    "description": null
   },
   "30": {
     "location": "Section 310 Row 12 Seat 110",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 1,
     "game": "Nov 5 v Chicago",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "31": {
     "location": "Sec 105 Row 18",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 1,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "42": {
-    "description": "Giveaway - Guess my favorite player on the current roster"
+    "description": "brief description of giveaway: guessing game for St. Louis game"
   },
   "43": {
     "location": "lower bowl section 103 row 9",
-    "price": 210,
+    "price_per_ticket": 210,
+    "quantity": 5,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "45": {
     "location": "Lower bowl",
-    "price": 210,
+    "price_per_ticket": 210,
+    "quantity": 5,
     "game": "Dec 5th game",
-    "rating": "good"
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "46": {
     "location": "Lower bowl section 103 row 9",
-    "price": 300,
+    "price_per_ticket": 300,
+    "quantity": 3,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "47": {
     "location": "Lower bowl section 103 row 9",
-    "price": 300,
+    "price_per_ticket": 300,
+    "quantity": 3,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "53": {
     "location": "Section 319 row 15",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 1,
     "game": "home opener this evening",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "54": {
-    "description": "Looking to trade two floor seats to the Kaytranada + JUSTICE concert next week for a pair of Canucks tickets!"
+    "description": "brief description of trade: Trade Kaytranada + JUSTICE concert for Canucks tickets."
   },
   "66": {
     "location": "upper bowl centre ice, row 10",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 2,
     "game": "home opener on Thursday",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "74": {
     "location": "lower bowl, row 4",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": 2,
     "game": "opener against calgary",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "77": {
     "location": "section 313, row 10",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": null,
     "game": null,
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   },
   "84": {
     "location": "Section 114, Row 6",
-    "price": null,
+    "price_per_ticket": null,
+    "quantity": null,
     "game": "All games for the upcoming season",
-    "rating": null
+    "rating": "incomplete",
+    "description": "incomplete"
   }
 }

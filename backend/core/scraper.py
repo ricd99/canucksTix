@@ -3,11 +3,14 @@ import sys
 from pathlib import Path
 from typing import List, Dict, Any
 
+
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//gemini-api")
-
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
 import reddit_api
 import gemini_api
+from backend.db.database import SessionLocal
+from backend.services.db_service import upsert_ticket_batch
 
 # cache for testing
 TESTING_DATA_DIR = Path(__file__).parent / "testingData"
@@ -52,6 +55,29 @@ def getAllListings():
         with open(MERGED_CACHE, "w", encoding="utf-8") as f:
             json.dump(mergedData, f, indent=2)
 
+    try:
+        db = SessionLocal()
+        tickets_to_create = []
+        for c_id, c_data in mergedData.items():
+            ticket_data = {
+                "source": "reddit",
+                "author": c_data.get("author"),
+                "body": c_data.get("body"),
+                "created": c_data.get("created"),
+                "permalink": c_data.get("permalink"),
+                "location": c_data.get("location"),
+                "price_per_ticket": c_data.get("price_per_ticket"),
+                "quantity": c_data.get("quantity"),
+                "game": c_data.get("game"),
+                "rating": c_data.get("rating"),
+                "description": c_data.get("description"),
+            }
+            tickets_to_create.append(ticket_data)
+
+        upsert_ticket_batch(db, tickets_to_create)
+    finally:
+        db.close()
+
     return mergedData
 
 
@@ -64,17 +90,18 @@ def _getBodies(comments):
 
 
 def _mergeAnalysis(comments, analysis):
+    merged = {}
     for k, v in analysis.items():
-        comments["comments"][k]["analysis"] = v
+        merged[k] = comments["comments"][k] | v
 
     keysToDelete = []
     for k, v in comments["comments"].items():
-        if "analysis" not in v:
+        if k not in merged.keys():
             keysToDelete.append(k)
 
     for k in keysToDelete:
         del comments["comments"][k]
-    return comments
+    return merged
 
 
 if __name__ == "__main__":

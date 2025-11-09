@@ -22,7 +22,7 @@ class Ticket(Base):
     author = Column(String)
     body = Column(String)
     created = Column(DateTime)
-    permalink = Column(String)
+    permalink = Column(String, unique=True, index=True)
 
     location = Column(String, nullable=True)
     price_per_ticket = Column(Float, nullable=True)

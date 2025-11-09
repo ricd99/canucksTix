@@ -40,6 +40,7 @@ def getComments():
         res = {}
         for i, c in enumerate(flattened):
             res[str(i)] = {
+                "source": "reddit",
                 "author": str(c.author),
                 "body": c.body,
                 "created": datetime.fromtimestamp(c.created_utc).strftime(

@@ -23,4 +23,4 @@ router = APIRouter(
 @router.get("", response_model=TicketListResponse)
 def get_tickets(db: Session = Depends(get_db)):
     tickets = db.query(Ticket).all()
-    return {"total": len(tickets), "tickets": tickets}
+    return tickets

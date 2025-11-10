@@ -9,8 +9,7 @@
     "price_per_ticket": 90,
     "quantity": 2,
     "game": "tonight vs nyr",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "7": {
     "source": "reddit",
@@ -21,9 +20,8 @@
     "location": "section 103 row 9",
     "price_per_ticket": 220,
     "quantity": 2,
-    "game": null,
-    "rating": "poor",
-    "description": "incomplete"
+    "game": "Jets",
+    "rating": "poor"
   },
   "8": {
     "source": "reddit",
@@ -35,8 +33,7 @@
     "price_per_ticket": 125,
     "quantity": 2,
     "game": "Oct 28th game vs New York Rangers",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "9": {
     "source": "reddit",
@@ -61,8 +58,7 @@
     "price_per_ticket": 102.5,
     "quantity": 2,
     "game": "Edmonton on Sunday, Oct. 26",
-    "rating": "face value",
-    "description": null
+    "rating": "good"
   },
   "12": {
     "source": "reddit",
@@ -74,8 +70,7 @@
     "price_per_ticket": 112.5,
     "quantity": 2,
     "game": "Oilers game Oct 26",
-    "rating": "face value",
-    "description": null
+    "rating": "good"
   },
   "14": {
     "source": "reddit",
@@ -100,8 +95,7 @@
     "price_per_ticket": 150,
     "quantity": 2,
     "game": "October 25th vs Montreal",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "16": {
     "source": "reddit",
@@ -148,7 +142,7 @@
     "body": "Want to trade NYR October 28 two upper defending zone tickets for a equivalent game.",
     "created": "2025-10-19 14:22:15",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkdktyr/",
-    "description": "brief description of trade: Want to trade NYR October 28 two upper defending zone tickets for a equivalent game."
+    "description": "trade NYR October 28 two upper defending zone tickets for a equivalent game."
   },
   "29": {
     "source": "reddit",
@@ -160,8 +154,7 @@
     "price_per_ticket": 350,
     "quantity": 2,
     "game": "Montreal game on October 25th",
-    "rating": "poor",
-    "description": null
+    "rating": "poor"
   },
   "30": {
     "source": "reddit",
@@ -195,7 +188,7 @@
     "body": "Can\u2019t make the game this afternoon vs St. Louis and haven\u2019t had any luck finding someone to take my seats.\nLower bowl, section 112, row 7. Great view.\n\nFirst to guess my favorite player on the current roster takes the tickets.",
     "created": "2025-10-13 09:36:23",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njaq1cx/",
-    "description": "brief description of giveaway: guessing game for St. Louis game"
+    "description": "Giveaway for St. Louis game"
   },
   "43": {
     "source": "reddit",
@@ -268,7 +261,7 @@
     "body": "I have 2 floor seats to the Kaytranada + JUSTICE concert next week (face value = $418) and looking to trade them for a pair of Canucks tickets!",
     "created": "2025-10-09 07:51:25",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nilt2g3/",
-    "description": "brief description of trade: Trade Kaytranada + JUSTICE concert for Canucks tickets."
+    "description": "Trade 2 floor seats to Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
   },
   "66": {
     "source": "reddit",

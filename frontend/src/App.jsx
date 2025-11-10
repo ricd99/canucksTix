@@ -20,8 +20,17 @@ function App() {
 
     try {
       const response = await axios.get(`${API_BASE_URL}/tickets`);
-      setTickets(response.data.tickets);
+      setTickets(response.data);
     } catch (err) {
+      if (err.response) {
+        console.error("Response data:", err.response.data);
+        console.error("Status:", err.response.status);
+        console.error("Headers:", err.response.headers);
+      } else if (err.request) {
+        console.error("No response received:", err.request);
+      } else {
+        console.error("Error:", err.message);
+      }
       setError("Failed to load tickets");   
     } finally {
       setLoading(false);

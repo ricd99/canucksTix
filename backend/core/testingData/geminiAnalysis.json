@@ -4,24 +4,21 @@
     "price_per_ticket": 90,
     "quantity": 2,
     "game": "tonight vs nyr",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "7": {
     "location": "section 103 row 9",
     "price_per_ticket": 220,
     "quantity": 2,
-    "game": null,
-    "rating": "poor",
-    "description": "incomplete"
+    "game": "Jets",
+    "rating": "poor"
   },
   "8": {
     "location": "Sec 122 row 11",
     "price_per_ticket": 125,
     "quantity": 2,
     "game": "Oct 28th game vs New York Rangers",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "9": {
     "location": "Sec 325 row 5 or 7",
@@ -36,16 +33,14 @@
     "price_per_ticket": 102.5,
     "quantity": 2,
     "game": "Edmonton on Sunday, Oct. 26",
-    "rating": "face value",
-    "description": null
+    "rating": "good"
   },
   "12": {
     "location": "Sec 316, row 13",
     "price_per_ticket": 112.5,
     "quantity": 2,
     "game": "Oilers game Oct 26",
-    "rating": "face value",
-    "description": null
+    "rating": "good"
   },
   "14": {
     "location": "Section 122 row 12",
@@ -60,8 +55,7 @@
     "price_per_ticket": 150,
     "quantity": 2,
     "game": "October 25th vs Montreal",
-    "rating": "good",
-    "description": null
+    "rating": "good"
   },
   "16": {
     "location": null,
@@ -88,15 +82,14 @@
     "description": "incomplete"
   },
   "26": {
-    "description": "brief description of trade: Want to trade NYR October 28 two upper defending zone tickets for a equivalent game."
+    "description": "trade NYR October 28 two upper defending zone tickets for a equivalent game."
   },
   "29": {
     "location": "Section 122, row 19",
     "price_per_ticket": 350,
     "quantity": 2,
     "game": "Montreal game on October 25th",
-    "rating": "poor",
-    "description": null
+    "rating": "poor"
   },
   "30": {
     "location": "Section 310 Row 12 Seat 110",
@@ -115,7 +108,7 @@
     "description": "incomplete"
   },
   "42": {
-    "description": "brief description of giveaway: guessing game for St. Louis game"
+    "description": "Giveaway for St. Louis game"
   },
   "43": {
     "location": "lower bowl section 103 row 9",
@@ -158,7 +151,7 @@
     "description": "incomplete"
   },
   "54": {
-    "description": "brief description of trade: Trade Kaytranada + JUSTICE concert for Canucks tickets."
+    "description": "Trade 2 floor seats to Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
   },
   "66": {
     "location": "upper bowl centre ice, row 10",

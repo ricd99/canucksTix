@@ -2,15 +2,24 @@ import json
 import sys
 from pathlib import Path
 from typing import List, Dict, Any
-
+import os
 
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-api")
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//gemini-api")
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
-import reddit_api
 import gemini_api
 from backend.db.database import SessionLocal
-from backend.services.db_service import upsert_ticket_batch
+from backend.db.db_service import upsert_ticket_batch
+
+sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
+from backend.core.config import settings
+
+db_path = settings.DATABASE_URL.replace("sqlite:///", "")
+full_path = os.path.abspath(db_path)
+print(f"📂 Database file location: {full_path}")
+print(f"📄 File exists: {os.path.exists(full_path)}")
+if os.path.exists(full_path):
+    print(f"📊 File size: {os.path.getsize(full_path)} bytes")
 
 # cache for testing
 TESTING_DATA_DIR = Path(__file__).parent / "testingData"
@@ -19,7 +28,7 @@ REDDIT_CACHE = TESTING_DATA_DIR / "redditComments.json"
 GEMINI_CACHE = TESTING_DATA_DIR / "geminiAnalysis.json"
 MERGED_CACHE = TESTING_DATA_DIR / "merged.json"
 
-USE_CACHE = False
+USE_CACHE = True
 
 
 def getAllListings():
@@ -57,31 +66,23 @@ def getAllListings():
 
     try:
         db = SessionLocal()
-        tickets_to_create = []
-        for c_id, c_data in mergedData.items():
-            ticket_data = {
-                "source": "reddit",
-                "author": c_data.get("author"),
-                "body": c_data.get("body"),
-                "created": c_data.get("created"),
-                "permalink": c_data.get("permalink"),
-                "location": c_data.get("location"),
-                "price_per_ticket": c_data.get("price_per_ticket"),
-                "quantity": c_data.get("quantity"),
-                "game": c_data.get("game"),
-                "rating": c_data.get("rating"),
-                "description": c_data.get("description"),
-            }
-            tickets_to_create.append(ticket_data)
+        res = upsert_ticket_batch(db, mergedData)
+        from backend.models.ticket import Ticket
 
-        upsert_ticket_batch(db, tickets_to_create)
+        count = db.query(Ticket).count()
+        print(f"Total tickets in database: {count}")
+    except Exception as e:
+        print(f"❌ Error upserting tickets: {e}")
+        import traceback
+
+        traceback.print_exc()
     finally:
         db.close()
 
-    return mergedData
+    return res
 
 
-def _getBodies(comments):
+def _getBodies(comments: Dict[str, Any]) -> List[str]:
     res = []
     for c in comments["comments"].values():
         res.append(c["body"])
@@ -106,7 +107,5 @@ def _mergeAnalysis(comments, analysis):
 
 if __name__ == "__main__":
     data = getAllListings()
-    print(json.dumps(data, indent=2))
-    # comments, analysis = getAllListings()
-    # print(json.dumps(comments, indent=2))
-    # print(json.dumps(analysis, indent=2))
+    print(data)
+    # print(json.dumps(data, indent=2))

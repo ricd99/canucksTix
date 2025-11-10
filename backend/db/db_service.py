@@ -3,6 +3,9 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 import sys
 
+# debugging purposes
+import json
+
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
 from backend.models.ticket import Ticket
 from backend.db.database import get_db
@@ -48,6 +51,30 @@ def create_ticket(db: Session, ticket_data: Dict) -> Ticket:
     return ticket
 
 
+def create_ticket_batch(db: Session, tickets_data: List[Dict]) -> List[Ticket]:
+    tickets = []
+    for ticket_data in tickets_data:
+        ticket = Ticket(
+            source=ticket_data.get("source"),
+            author=ticket_data.get("author"),
+            body=ticket_data.get("body"),
+            created=_parse_created(ticket_data.get("created")),
+            permalink=ticket_data.get("permalink"),
+            location=ticket_data.get("location"),
+            price_per_ticket=ticket_data.get("price_per_ticket"),
+            quantity=ticket_data.get("quantity"),
+            game=ticket_data.get("game"),
+            rating=ticket_data.get("rating"),
+            description=ticket_data.get("description"),
+        )
+        tickets.append(ticket)
+        db.add(ticket)
+    db.commit()
+    for ticket in tickets:
+        db.refresh(ticket)
+    return tickets
+
+
 def upsert_ticket(db: Session, ticket_data: Dict) -> Ticket:
     """
     Update existing ticket if permalink matches, otherwise create.
@@ -91,43 +118,20 @@ def upsert_ticket(db: Session, ticket_data: Dict) -> Ticket:
         )
 
 
-def create_ticket_batch(db: Session, tickets_data: List[Dict]) -> List[Ticket]:
-    tickets = []
-    for ticket_data in tickets_data:
-        ticket = Ticket(
-            source=ticket_data.get("source"),
-            author=ticket_data.get("author"),
-            body=ticket_data.get("body"),
-            created=_parse_created(ticket_data.get("created")),
-            permalink=ticket_data.get("permalink"),
-            location=ticket_data.get("location"),
-            price_per_ticket=ticket_data.get("price_per_ticket"),
-            quantity=ticket_data.get("quantity"),
-            game=ticket_data.get("game"),
-            rating=ticket_data.get("rating"),
-            description=ticket_data.get("description"),
-        )
-        tickets.append(ticket)
-        db.add(ticket)
-    db.commit()
-    for ticket in tickets:
-        db.refresh(ticket)
-    return tickets
-
-
-def upsert_ticket_batch(db: Session, tickets_data: List[Dict]) -> List[Ticket]:
+def upsert_ticket_batch(db: Session, tickets: List[Dict]) -> List[Ticket]:
     """
     For each ticket_data: if permalink exists, update; otherwise create.
     Commits once at the end and refreshes returned objects.
     """
     results: List[Ticket] = []
-    to_add: List[Ticket] = []
-    for ticket_data in tickets_data:
-        obj = upsert_ticket(db, ticket_data)
+
+    for k, v in tickets.items():
+        data_with_source = {"source": "reddit", **v}
+        # print(json.dumps(data_with_source, indent=2))
+        obj = upsert_ticket(db, data_with_source)
         if isinstance(obj, Ticket) and obj.id is None:
             # newly created object (not yet in DB) -> add to session
             db.add(obj)
-            to_add.append(obj)
         results.append(obj)
 
     db.commit()

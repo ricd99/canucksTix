@@ -73,6 +73,9 @@ header button:hover {
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ticket-card:hover {
@@ -84,13 +87,22 @@ header button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
-  gap: 10px;
+  margin-bottom: 8px;
 }
 
-.location {
-  font-weight: bold;
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #001f5b;
+  white-space: nowrap;
+}
+
+.ticket-location {
+  font-weight: 600;
   color: #333;
+  margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .rating {
@@ -98,42 +110,40 @@ header button:hover {
   border-radius: 6px;
   font-weight: bold;
   font-size: 0.85rem;
+  color: white;
 }
 
+
 .rating.excellent {
-  background: #4caf50;
-  color: white;
+  background: #0057b7;
 }
 
 .rating.good {
-  background: #2196f3;
-  color: white;
+  background: #2e8b57;
 }
 
-.rating.fair {
-  background: #ff9800;
-  color: white;
+.rating.facevalue { 
+  background: #f2a900; 
+  color: #1a1a1a; 
 }
 
 .rating.poor {
-  background: #f44336;
-  color: white;
+  background: #d72638;
 }
 
-.price {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #001F5B;
+.rating.incomplete {
+  background: #7a7a7a; 
 }
+
+.missing-price {
+  border-bottom: 2px solid red;
+}
+
 
 .ticket-details {
+  color: #333;
   margin-bottom: 15px;
   line-height: 1.6;
-}
-
-.ticket-details p {
-  color: #333;
-  margin-bottom: 5px;
 }
 
 .ticket-body {
@@ -146,6 +156,10 @@ header button:hover {
 .ticket-body p {
   color: #555;
   line-height: 1.5;
+}
+
+.ticket-body p:last-child {
+  margin-bottom: 0;
 }
 
 .ticket-footer {

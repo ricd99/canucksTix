@@ -5,6 +5,12 @@ from core.config import settings
 from routers import ticket
 from db.database import create_tables
 
+import os
+
+db_path = settings.DATABASE_URL.replace("sqlite:///", "")
+full_path = os.path.abspath(db_path)
+print(f"📂 FastAPI using database: {full_path}")
+
 create_tables()
 
 app = FastAPI(

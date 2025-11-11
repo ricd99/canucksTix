@@ -8,6 +8,7 @@ sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//reddit-a
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix//libs//gemini-api")
 sys.path.insert(1, "C://Users//ryanh//code//projects//canucksTix")
 import gemini_api
+import reddit_api
 from backend.db.database import SessionLocal
 from backend.db.db_service import upsert_ticket_batch
 
@@ -28,7 +29,7 @@ REDDIT_CACHE = TESTING_DATA_DIR / "redditComments.json"
 GEMINI_CACHE = TESTING_DATA_DIR / "geminiAnalysis.json"
 MERGED_CACHE = TESTING_DATA_DIR / "merged.json"
 
-USE_CACHE = True
+USE_CACHE = False
 
 
 def getAllListings():

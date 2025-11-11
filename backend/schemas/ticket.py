@@ -20,12 +20,3 @@ class TicketResponse(BaseModel):
 
     class Config:
         from_attributes = True
-
-
-class TicketListResponse(BaseModel):
-    """
-    Response when getting multiple tickets
-    """
-
-    total: int
-    tickets: list[TicketResponse]

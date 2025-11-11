@@ -19,7 +19,10 @@ function App() {
     setError(null);
 
     try {
+      console.log("🔄 Fetching tickets from:", `${API_BASE_URL}/tickets`);
       const response = await axios.get(`${API_BASE_URL}/tickets`);
+      console.log("✅ Response received:", response.data);
+      console.log("📊 Number of tickets:", response.data.length);
       setTickets(response.data);
     } catch (err) {
       if (err.response) {

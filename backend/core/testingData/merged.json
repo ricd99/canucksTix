@@ -6,7 +6,7 @@
     "created": "2025-10-28 11:02:02",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlv9708/",
     "location": "Sec 310 row 5",
-    "price_per_ticket": 90,
+    "price_per_ticket": 90.0,
     "quantity": 2,
     "game": "tonight vs nyr",
     "rating": "good"
@@ -18,7 +18,7 @@
     "created": "2025-10-28 02:05:17",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlsqn1z/",
     "location": "section 103 row 9",
-    "price_per_ticket": 220,
+    "price_per_ticket": 220.0,
     "quantity": 2,
     "game": "Jets",
     "rating": "poor"
@@ -30,7 +30,7 @@
     "created": "2025-10-27 18:36:22",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nlr4vo2/",
     "location": "Sec 122 row 11",
-    "price_per_ticket": 125,
+    "price_per_ticket": 125.0,
     "quantity": 2,
     "game": "Oct 28th game vs New York Rangers",
     "rating": "good"
@@ -45,7 +45,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "tomorrow Oct 28 Vs Rangers",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "11": {
@@ -58,7 +57,7 @@
     "price_per_ticket": 102.5,
     "quantity": 2,
     "game": "Edmonton on Sunday, Oct. 26",
-    "rating": "good"
+    "rating": "face value"
   },
   "12": {
     "source": "reddit",
@@ -70,7 +69,7 @@
     "price_per_ticket": 112.5,
     "quantity": 2,
     "game": "Oilers game Oct 26",
-    "rating": "good"
+    "rating": "face value"
   },
   "14": {
     "source": "reddit",
@@ -82,7 +81,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "return of Miller on Tuesday",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "15": {
@@ -92,10 +90,10 @@
     "created": "2025-10-23 09:51:16",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkzhqsr/",
     "location": "Section 307, Row 4",
-    "price_per_ticket": 150,
+    "price_per_ticket": 150.0,
     "quantity": 2,
     "game": "October 25th vs Montreal",
-    "rating": "good"
+    "rating": "poor"
   },
   "16": {
     "source": "reddit",
@@ -103,11 +101,10 @@
     "body": "I need to sell 2 tickets to the Friday December 5 game against Utah. Please DM if you're interested.",
     "created": "2025-10-22 23:08:47",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkwvl3d/",
+    "game": "Friday December 5 game against Utah",
     "location": null,
     "price_per_ticket": null,
     "quantity": 2,
-    "game": "Friday December 5 game against Utah",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "18": {
@@ -117,23 +114,9 @@
     "created": "2025-10-21 21:59:54",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkq89d5/",
     "location": "section 122, row 11",
-    "price_per_ticket": 130,
+    "price_per_ticket": 130.0,
     "quantity": 2,
     "game": null,
-    "rating": "incomplete",
-    "description": "incomplete"
-  },
-  "19": {
-    "source": "reddit",
-    "author": "SKitura",
-    "body": "Looking to sell 2 tickets to the Abby Canucks home opener in offensive end.",
-    "created": "2025-10-20 21:45:20",
-    "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkjw4ao/",
-    "location": null,
-    "price_per_ticket": null,
-    "quantity": 2,
-    "game": "Abby Canucks home opener",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "26": {
@@ -142,7 +125,7 @@
     "body": "Want to trade NYR October 28 two upper defending zone tickets for a equivalent game.",
     "created": "2025-10-19 14:22:15",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nkdktyr/",
-    "description": "trade NYR October 28 two upper defending zone tickets for a equivalent game."
+    "description": "brief description of trade"
   },
   "29": {
     "source": "reddit",
@@ -151,7 +134,7 @@
     "created": "2025-10-16 15:12:16",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njvet6u/",
     "location": "Section 122, row 19",
-    "price_per_ticket": 350,
+    "price_per_ticket": 350.0,
     "quantity": 2,
     "game": "Montreal game on October 25th",
     "rating": "poor"
@@ -166,7 +149,6 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": "Nov 5 v Chicago",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "31": {
@@ -179,7 +161,6 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "42": {
@@ -188,7 +169,7 @@
     "body": "Can\u2019t make the game this afternoon vs St. Louis and haven\u2019t had any luck finding someone to take my seats.\nLower bowl, section 112, row 7. Great view.\n\nFirst to guess my favorite player on the current roster takes the tickets.",
     "created": "2025-10-13 09:36:23",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/njaq1cx/",
-    "description": "Giveaway for St. Louis game"
+    "description": "brief description of giveaway"
   },
   "43": {
     "source": "reddit",
@@ -197,10 +178,9 @@
     "created": "2025-10-10 13:41:01",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niu3ve6/",
     "location": "lower bowl section 103 row 9",
-    "price_per_ticket": 210,
+    "price_per_ticket": 210.0,
     "quantity": 5,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "45": {
@@ -210,11 +190,10 @@
     "created": "2025-10-09 23:03:01",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niq9130/",
     "location": "Lower bowl",
-    "price_per_ticket": 210,
+    "price_per_ticket": 210.0,
     "quantity": 5,
     "game": "Dec 5th game",
-    "rating": "incomplete",
-    "description": "incomplete"
+    "rating": "poor"
   },
   "46": {
     "source": "reddit",
@@ -223,10 +202,9 @@
     "created": "2025-10-09 22:57:58",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niq8htd/",
     "location": "Lower bowl section 103 row 9",
-    "price_per_ticket": 300,
+    "price_per_ticket": 300.0,
     "quantity": 3,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "47": {
@@ -236,10 +214,9 @@
     "created": "2025-10-09 22:57:36",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/niq8gg8/",
     "location": "Lower bowl section 103 row 9",
-    "price_per_ticket": 300,
+    "price_per_ticket": 300.0,
     "quantity": 3,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "53": {
@@ -252,7 +229,6 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": "home opener this evening",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "54": {
@@ -261,7 +237,7 @@
     "body": "I have 2 floor seats to the Kaytranada + JUSTICE concert next week (face value = $418) and looking to trade them for a pair of Canucks tickets!",
     "created": "2025-10-09 07:51:25",
     "permalink": "https://reddit.com/r/canucks/comments/1nvaldi/rcanucks_ticket_exchange_thread/nilt2g3/",
-    "description": "Trade 2 floor seats to Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
+    "description": "brief description of trade"
   },
   "66": {
     "source": "reddit",
@@ -273,7 +249,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "home opener on Thursday",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "74": {
@@ -286,7 +261,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "opener against calgary",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "77": {
@@ -299,7 +273,6 @@
     "price_per_ticket": null,
     "quantity": null,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "84": {
@@ -312,7 +285,6 @@
     "price_per_ticket": null,
     "quantity": null,
     "game": "All games for the upcoming season",
-    "rating": "incomplete",
     "description": "incomplete"
   }
 }

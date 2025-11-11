@@ -1,21 +1,21 @@
 {
   "6": {
     "location": "Sec 310 row 5",
-    "price_per_ticket": 90,
+    "price_per_ticket": 90.0,
     "quantity": 2,
     "game": "tonight vs nyr",
     "rating": "good"
   },
   "7": {
     "location": "section 103 row 9",
-    "price_per_ticket": 220,
+    "price_per_ticket": 220.0,
     "quantity": 2,
     "game": "Jets",
     "rating": "poor"
   },
   "8": {
     "location": "Sec 122 row 11",
-    "price_per_ticket": 125,
+    "price_per_ticket": 125.0,
     "quantity": 2,
     "game": "Oct 28th game vs New York Rangers",
     "rating": "good"
@@ -25,7 +25,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "tomorrow Oct 28 Vs Rangers",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "11": {
@@ -33,60 +32,49 @@
     "price_per_ticket": 102.5,
     "quantity": 2,
     "game": "Edmonton on Sunday, Oct. 26",
-    "rating": "good"
+    "rating": "face value"
   },
   "12": {
     "location": "Sec 316, row 13",
     "price_per_ticket": 112.5,
     "quantity": 2,
     "game": "Oilers game Oct 26",
-    "rating": "good"
+    "rating": "face value"
   },
   "14": {
     "location": "Section 122 row 12",
     "price_per_ticket": null,
     "quantity": 2,
     "game": "return of Miller on Tuesday",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "15": {
     "location": "Section 307, Row 4",
-    "price_per_ticket": 150,
+    "price_per_ticket": 150.0,
     "quantity": 2,
     "game": "October 25th vs Montreal",
-    "rating": "good"
+    "rating": "poor"
   },
   "16": {
+    "game": "Friday December 5 game against Utah",
     "location": null,
     "price_per_ticket": null,
     "quantity": 2,
-    "game": "Friday December 5 game against Utah",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "18": {
     "location": "section 122, row 11",
-    "price_per_ticket": 130,
+    "price_per_ticket": 130.0,
     "quantity": 2,
     "game": null,
-    "rating": "incomplete",
-    "description": "incomplete"
-  },
-  "19": {
-    "location": null,
-    "price_per_ticket": null,
-    "quantity": 2,
-    "game": "Abby Canucks home opener",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "26": {
-    "description": "trade NYR October 28 two upper defending zone tickets for a equivalent game."
+    "description": "brief description of trade"
   },
   "29": {
     "location": "Section 122, row 19",
-    "price_per_ticket": 350,
+    "price_per_ticket": 350.0,
     "quantity": 2,
     "game": "Montreal game on October 25th",
     "rating": "poor"
@@ -96,7 +84,6 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": "Nov 5 v Chicago",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "31": {
@@ -104,42 +91,37 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "42": {
-    "description": "Giveaway for St. Louis game"
+    "description": "brief description of giveaway"
   },
   "43": {
     "location": "lower bowl section 103 row 9",
-    "price_per_ticket": 210,
+    "price_per_ticket": 210.0,
     "quantity": 5,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "45": {
     "location": "Lower bowl",
-    "price_per_ticket": 210,
+    "price_per_ticket": 210.0,
     "quantity": 5,
     "game": "Dec 5th game",
-    "rating": "incomplete",
-    "description": "incomplete"
+    "rating": "poor"
   },
   "46": {
     "location": "Lower bowl section 103 row 9",
-    "price_per_ticket": 300,
+    "price_per_ticket": 300.0,
     "quantity": 3,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "47": {
     "location": "Lower bowl section 103 row 9",
-    "price_per_ticket": 300,
+    "price_per_ticket": 300.0,
     "quantity": 3,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "53": {
@@ -147,18 +129,16 @@
     "price_per_ticket": null,
     "quantity": 1,
     "game": "home opener this evening",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "54": {
-    "description": "Trade 2 floor seats to Kaytranada + JUSTICE concert for a pair of Canucks tickets!"
+    "description": "brief description of trade"
   },
   "66": {
     "location": "upper bowl centre ice, row 10",
     "price_per_ticket": null,
     "quantity": 2,
     "game": "home opener on Thursday",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "74": {
@@ -166,7 +146,6 @@
     "price_per_ticket": null,
     "quantity": 2,
     "game": "opener against calgary",
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "77": {
@@ -174,7 +153,6 @@
     "price_per_ticket": null,
     "quantity": null,
     "game": null,
-    "rating": "incomplete",
     "description": "incomplete"
   },
   "84": {
@@ -182,7 +160,6 @@
     "price_per_ticket": null,
     "quantity": null,
     "game": "All games for the upcoming season",
-    "rating": "incomplete",
     "description": "incomplete"
   }
 }

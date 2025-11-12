@@ -83,36 +83,55 @@ header button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.ticket-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
+.ticket-header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-
-.price {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #001f5b;
-  white-space: nowrap;
-}
-
-.ticket-location {
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-  word-break: break-word;
-}
-
-.rating {
+.ticket-header-grid .rating {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   padding: 6px 12px;
   border-radius: 6px;
   font-weight: bold;
   font-size: 0.85rem;
   color: white;
+  width: fit-content;
 }
 
+.ticket-header-grid .price {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: right;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #001f5b;
+}
+
+.ticket-header-grid .ticket-game {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-weight: 600;
+  color: #333;
+  word-break: break-word;
+}
+
+.ticket-header-grid .ticket-location {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+  word-break: break-word;
+}
+
+.header-row {
+  word-break: break-word;
+  max-width: 100%;
+}
 
 .rating.excellent {
   background: #0057b7;
@@ -123,8 +142,7 @@ header button:hover {
 }
 
 .rating.facevalue { 
-  background: #f2a900; 
-  color: #1a1a1a; 
+  background: #cc9b1d; 
 }
 
 .rating.poor {
@@ -137,13 +155,6 @@ header button:hover {
 
 .missing-price {
   border-bottom: 2px solid red;
-}
-
-
-.ticket-details {
-  color: #333;
-  margin-bottom: 15px;
-  line-height: 1.6;
 }
 
 .ticket-body {
